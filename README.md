@@ -17,10 +17,9 @@ Quando implantado, a estrutura no GitHub Pages será:
 
 Antes de começar localmente, certifique-se de ter Python e pip (gerenciador de pacotes Python) instalados.
 
-Instale o MkDocs e o tema Material (e outros plugins se listados no workflow):
+Para construir o site localmente, incluindo todos os plugins utilizados neste projeto (conforme definido em `mkdocs.yml` e no workflow de deploy), instale:
 ```bash
-pip install mkdocs mkdocs-material
-# Ex: pip install mkdocs-mermaid2 # Se você usa plugins adicionais
+pip install mkdocs mkdocs-material mkdocs-mermaid2 mkdocs-jupyter
 ```
 
 ## Estrutura do Projeto
@@ -54,7 +53,8 @@ O deploy é gerenciado pelo workflow em `.github/workflows/mkdocs-deploy.yml`. E
 **O que o workflow faz:**
 1.  **Checkout do Código:** Baixa a versão mais recente do seu repositório.
 2.  **Configura Python:** Prepara o ambiente Python.
-3.  **Instala Dependências:** Instala `mkdocs`, `mkdocs-material`, etc.
+3.  **Instala Dependências:** Instala `mkdocs`, `mkdocs-material`, `mkdocs-mermaid2`, e `mkdocs-jupyter`.
+
 4.  **Constrói a Documentação MkDocs:** Executa `mkdocs build -d _mkdocssite` para gerar os arquivos da documentação em um diretório específico.
 5.  **Prepara o Diretório de Deploy Final (`public/`):**
     *   Copia a `index.html` (página de destino personalizada) para a raiz deste diretório (`public/index.html`).

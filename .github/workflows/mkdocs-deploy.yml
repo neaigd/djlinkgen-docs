@@ -25,9 +25,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install mkdocs mkdocs-material
-          # Add any other mkdocs plugins used in your mkdocs.yml here
-          # For example: pip install mkdocs-mermaid2
+          pip install mkdocs mkdocs-material mkdocs-mermaid2 mkdocs-jupyter
+
 
       - name: Build MkDocs site
         run: |
