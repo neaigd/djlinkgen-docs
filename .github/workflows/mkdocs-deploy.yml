@@ -1,0 +1,52 @@
+name: Deploy Site with Custom Landing Page to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Or 'master' if that's your default branch
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required for actions/checkout and for peaceiris/actions-gh-pages to push to gh-pages
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetches all history, useful for some MkDocs plugins or versioning
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs mkdocs-material mkdocs-jupyter # MODIFIED LINE
+
+      - name: Build MkDocs site
+        run: |
+          mkdocs build --site-dir _mkdocssite
+          # This builds the MkDocs site into a directory named '_mkdocssite'
+
+      - name: Prepare deployment directory
+        run: |
+          mkdir -p public/docs  # Create 'public' and 'public/docs'
+          cp index.html public/index.html # Copy custom landing page to public root
+          cp -r _mkdocssite/* public/docs/ # Copy MkDocs site to public/docs/
+          # If you have a logo file at the root, e.g. logo.png, uncomment the next line:
+          # cp logo.png public/logo.png
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          # By default, this action pushes to the 'gh-pages' branch.
+          # It will create the branch if it doesn't exist.
+          # It will overwrite the existing contents of the branch.
+          # Use 'force_orphan: true' if you want each deploy to be a fresh start without history on gh-pages
+          # cname: your.custom.domain.com # Uncomment if you have a custom domain

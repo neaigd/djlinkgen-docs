@@ -1,4 +1,3 @@
-
 site_name: djlinkgen — IA Generativa para o Direito
 site_url: https://neaigd.github.io/djlinkgen/ # Replace neaigd with your username if different
 site_author: neaigd # Replace with your name/username
@@ -32,7 +31,11 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences: # MODIFIED SECTION
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.snippets
   - pymdownx.tabbed:
       alternate_style: true
@@ -50,8 +53,7 @@ markdown_extensions:
 
 plugins:
   - search
-  - mermaid2 # For Mermaid diagrams
-  - mkdocs-jupyter # Optional: if you plan to include Jupyter notebooks
+  - mkdocs-jupyter # Optional: if you plan to include Jupyter notebooks # MODIFIED SECTION
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6 # For MathJax
@@ -69,12 +71,13 @@ nav:
       - 03 Executando o Projeto: tutorial/executar.md
       - 04 Editando e Modificando: tutorial/04-editando-e-modificando.md
       - 05 Explorando com IA: tutorial/explorando-com-ai.md
-      - 06 Comandos Git e Deploy: tutorial/05-comandos-git-e-deploy.md # Kept original numbering if it implies specific git commands
-      - 07 Práticas de Aprendizagem: tutorial/06-praticas-de-aprendizagem.md # Kept original numbering
+      - 06 Comandos Git e Deploy: tutorial/05-comandos-git-e-deploy.md
+      - 07 Práticas de Aprendizagem: tutorial/06-praticas-de-aprendizagem.md
+      - 08 Ideias para Expandir: ideias-para-expandir.md
   - Casos de Uso:
       - Estudos de Caso: estudos-de-caso.md
       - Comparação com outros fluxos: comparacao-com-outros-fluxos.md
   - Referência Técnica: referencia.md
-  - Contribuições: contribuindo.md # Added to nav
-  - Licença: licenca.md # Added to nav
+  - Contribuições: contribuindo.md
+  - Licença: licenca.md
   - Sobre: sobre.md
