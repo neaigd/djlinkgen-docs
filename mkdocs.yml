@@ -1,0 +1,80 @@
+
+site_name: djlinkgen — IA Generativa para o Direito
+site_url: https://neaigd.github.io/djlinkgen/ # Replace neaigd with your username if different
+site_author: neaigd # Replace with your name/username
+site_description: Projeto introdutório de IA aplicada ao Direito, com tutorial e documentação técnico-pedagógica.
+
+repo_name: neaigd/djlinkgen
+repo_url: https://github.com/neaigd/djlinkgen
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.instant
+    - content.code.annotate
+    - content.code.copy
+    - toc.integrate
+    - content.action.edit
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex: # For MathJax
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+
+plugins:
+  - search
+  - mermaid2 # For Mermaid diagrams
+  - mkdocs-jupyter # Optional: if you plan to include Jupyter notebooks
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6 # For MathJax
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js # For MathJax
+
+nav:
+  - Início: index.md
+  - Apresentação:
+      - Intuição Científica: intuicao-cientifica.md
+      - O que você pode aprender: o-que-aprender.md
+  - Tutorial:
+      - Visão Geral: tutorial/index.md
+      - 01 Configuração do Ambiente: tutorial/ambiente.md
+      - 02 Clonando o Repositório: tutorial/02-clonando-o-repositorio.md
+      - 03 Executando o Projeto: tutorial/executar.md
+      - 04 Editando e Modificando: tutorial/04-editando-e-modificando.md
+      - 05 Explorando com IA: tutorial/explorando-com-ai.md
+      - 06 Comandos Git e Deploy: tutorial/05-comandos-git-e-deploy.md # Kept original numbering if it implies specific git commands
+      - 07 Práticas de Aprendizagem: tutorial/06-praticas-de-aprendizagem.md # Kept original numbering
+  - Casos de Uso:
+      - Estudos de Caso: estudos-de-caso.md
+      - Comparação com outros fluxos: comparacao-com-outros-fluxos.md
+  - Referência Técnica: referencia.md
+  - Contribuições: contribuindo.md # Added to nav
+  - Licença: licenca.md # Added to nav
+  - Sobre: sobre.md
