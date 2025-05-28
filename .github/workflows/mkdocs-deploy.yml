@@ -25,7 +25,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install mkdocs mkdocs-material mkdocs-mermaid2 mkdocs-jupyter
+          pip install mkdocs mkdocs-material mkdocs-jupyter # MODIFIED LINE
 
 
       - name: Build MkDocs site
