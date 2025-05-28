@@ -71,6 +71,7 @@ nav:
       - 05 Explorando com IA: tutorial/explorando-com-ai.md
       - 06 Comandos Git e Deploy: tutorial/05-comandos-git-e-deploy.md # Kept original numbering if it implies specific git commands
       - 07 Práticas de Aprendizagem: tutorial/06-praticas-de-aprendizagem.md # Kept original numbering
+      - 08 Ideias para Expandir: ideias-para-expandir.md # New item
   - Casos de Uso:
       - Estudos de Caso: estudos-de-caso.md
       - Comparação com outros fluxos: comparacao-com-outros-fluxos.md
