@@ -27,6 +27,7 @@ jobs:
         run: |
           pip install mkdocs mkdocs-material mkdocs-mermaid2 mkdocs-jupyter
 
+
       - name: Build MkDocs site
         run: |
           mkdocs build --site-dir _mkdocssite
