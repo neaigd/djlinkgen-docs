@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao djlinkgen</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+        .logo-placeholder {
+            width: 150px; /* Default width */
+            height: 150px; /* Default height */
+            background-color: #e0e0e0;
+            border: 2px dashed #ccc;
+            margin: 0 auto 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+        }
+        /* Comment to instruct user: To add your logo, replace the div.logo-placeholder 
+           with an <img> tag, e.g., <img src="logo.png" alt="djlinkgen Logo" style="width: 150px; height: auto;"> 
+           or update the background-image of the div. */
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #007bff; /* Primary blue, change as needed */
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 
+            LOGO PLACEHOLDER:
+            To add your logo, you can either:
+            1. Replace this div with an <img> tag:
+               <img src="path/to/your/logo.png" alt="djlinkgen Logo" style="width: 150px; height: auto; margin-bottom: 20px;">
+            2. Or, if you prefer to use this div, upload your logo (e.g., 'logo.png') to the root directory 
+               and uncomment the following CSS within the <style> tags in the <head>:
+               .logo-placeholder {
+                   background-image: url('logo.png');
+                   background-size: contain;
+                   background-repeat: no-repeat;
+                   background-position: center;
+                   border: none; /* Optional: remove border if logo has its own bounds */
+                   text-indent: -9999px; /* Hide the placeholder text */
+               }
+            Ensure the logo file is in your repository and the path is correct.
+        -->
+        <div class="logo-placeholder">
+            Seu Logo Aqui
+            (150x150px)
+        </div>
+
+        <h1>Bem-vindo ao djlinkgen</h1>
+        <p>Um projeto introdutório de IA generativa aplicada ao Direito.</p>
+        
+        <a href="docs/" class="cta-button">Acessar a Documentação</a>
+        
+    </div>
+    <footer>
+        <p>&copy; <span id="year"></span> djlinkgen. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
