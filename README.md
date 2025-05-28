@@ -19,6 +19,7 @@ Antes de começar localmente, certifique-se de ter Python e pip (gerenciador de 
 
 Para construir o site localmente, incluindo todos os plugins utilizados neste projeto (conforme definido em `mkdocs.yml` e no workflow de deploy), instale:
 ```bash
+
 pip install mkdocs mkdocs-material mkdocs-jupyter
 ```
 
@@ -54,6 +55,7 @@ O deploy é gerenciado pelo workflow em `.github/workflows/mkdocs-deploy.yml`. E
 1.  **Checkout do Código:** Baixa a versão mais recente do seu repositório.
 2.  **Configura Python:** Prepara o ambiente Python.
 3.  **Instala Dependências:** Instala `mkdocs`, `mkdocs-material`, e `mkdocs-jupyter`.
+
 4.  **Constrói a Documentação MkDocs:** Executa `mkdocs build -d _mkdocssite` para gerar os arquivos da documentação em um diretório específico.
 5.  **Prepara o Diretório de Deploy Final (`public/`):**
     *   Copia a `index.html` (página de destino personalizada) para a raiz deste diretório (`public/index.html`).

@@ -74,6 +74,7 @@ nav:
       - 06 Comandos Git e Deploy: tutorial/05-comandos-git-e-deploy.md
       - 07 Práticas de Aprendizagem: tutorial/06-praticas-de-aprendizagem.md
       - 08 Ideias para Expandir: ideias-para-expandir.md
+
   - Casos de Uso:
       - Estudos de Caso: estudos-de-caso.md
       - Comparação com outros fluxos: comparacao-com-outros-fluxos.md

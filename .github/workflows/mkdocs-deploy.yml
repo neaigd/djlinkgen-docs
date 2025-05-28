@@ -27,6 +27,7 @@ jobs:
         run: |
           pip install mkdocs mkdocs-material mkdocs-jupyter # MODIFIED LINE
 
+
       - name: Build MkDocs site
         run: |
           mkdocs build --site-dir _mkdocssite
